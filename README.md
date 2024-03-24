@@ -5,7 +5,7 @@
   
   cd autoNMAP
   
-  chmod +x autonmap.sh
+  chmod +x Autonmap.sh
   
   ./autonmap.sh
 ```
