@@ -52,29 +52,29 @@ function start(){
 	echo -e "${endColour}"
 	echo -e "${grayColour}by 666aalexx${endColour}\n"
 	read -p "Ip: " ip
-	echo -e "\n\n${grayColour}Choose scan: ${endColour}"
+	echo -e "\n\n${grayColour}Choose scan mode: ${endColour}"
 	echo -e "\n${grayColour}[1]${endColour} Fast"
 	echo -e "${grayColour}[2]${endColour} Normal"
 	echo -e "${grayColour}[3]${endColour} Complete\n"
 	read -p "> " opt
+
+if [ $opt == "1" ]; then
+         clear
+         fast_nmap
+elif [ $opt == "2" ]; then
+         clear
+         normal_nmap
+elif [ $opt == "3" ]; then
+         clear
+         complete_nmap
+else
+         echo -e "${redColour}Error${endColour}"
+         sleep 1
+         clear
+         echo -e "${grayColour}Retrying...${endColour}"
+         sleep 1
+         start
+fi
 }
 
 start
-
-if [ $opt == "1" ]; then
-	clear
-	fast_nmap
-elif [ $opt == "2" ]; then
-	clear
-	normal_nmap
-elif [ $opt == "3" ]; then
-	clear
-	complete_nmap
-else
-	echo -e "${redColour}Error${endColour}"
-	sleep 1
-	clear
-	echo -e "${grayColour}Retrying...${endColour}"
-	sleep 1
-	start
-fi
