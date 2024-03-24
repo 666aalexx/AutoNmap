@@ -3,9 +3,9 @@
 ```
   git clone https://github.com/666aalexx/AutoNMAP.git
   
-  cd autoNMAP
+  cd AutoNMAP
   
-  chmod +x Autonmap.sh
+  chmod +x autonmap.sh
   
   ./autonmap.sh
 ```
