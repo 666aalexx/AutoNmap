@@ -23,6 +23,7 @@ function ctrl_c(){
 function fast_nmap(){
 	clear
 	nmap -p- --min-rate 10000 --open -vvv $ip -oN scan
+	(grep "PORT" scan && grep "open" scan | sed '1d') > OpenPorts.txt
 	clear
 	echo -e "${greenColour}[+] Scan completed${endColour}"
 }
@@ -30,6 +31,7 @@ function fast_nmap(){
 function normal_nmap(){
 	clear
 	nmap -p- --min-rate 5000 --open -vvv -n $ip -oN scan
+	(grep "PORT" scan && grep "open" scan | sed '1d') > OpenPorts.txt
 	clear
 	echo -e "${greenColour}[+] Scan completed${endColour}"
 }
@@ -37,6 +39,7 @@ function normal_nmap(){
 function complete_nmap(){
 	clear
 	nmap -p- -sVC -sC --min-rate 5000 --open -sS -vvv -n -Pn $ip -oN scan
+	(grep "PORT" scan && grep "open" scan | sed '1d') > OpenPorts.txt
 	clear
 	echo -e "${greenColour}[+] Scan completed${endColour}"
 }
