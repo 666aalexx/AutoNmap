@@ -3,7 +3,7 @@
 ```
   git clone https://github.com/666aalexx/AutoNMAP.git
   
-  cd AutoNMAP
+  cd AutoNMAP/
   
   chmod +x autonmap.sh
   
