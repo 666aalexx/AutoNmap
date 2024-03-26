@@ -1,7 +1,7 @@
 ### Execution
 
 ```
-  git clone https://github.com/666aalexx/AutoNMAP.git
+  git clone https://github.com/666aalexx/AutoNmap.git
   
   cd AutoNmap/
   
